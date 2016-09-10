@@ -6,6 +6,8 @@ import 'angular-material';
 import 'angular-animate';
 import BackendService from './backendService/backendService.module';
 
+import * as CONSTANTS from './core.constants';
+
 /**
  * @ngdoc overview
  * @name _core
@@ -18,6 +20,7 @@ const coreModule = angular.module('app.core', [
 	'ui.router',
 	'ngMaterial',
 	BackendService.name
-]);
+])
+	.constant('GOOGLE_API_KEY', CONSTANTS.GOOGLE_API_KEY);
 
 export default coreModule;

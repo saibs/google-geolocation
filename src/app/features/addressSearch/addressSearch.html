@@ -1,0 +1,66 @@
+<div class="address-search"
+	 layout="row"
+	 flex
+>
+	<form name="$ctrl.addressSearchForm"
+		  layout="column"
+		  flex
+		  flex-gt-sm="50"
+	>
+		<!--House number-->
+		<md-input-container>
+			<label>House number</label>
+			<input ng-model="$ctrl.address.houseNumber"
+				   name="houseNumber"
+			>
+		</md-input-container>
+		<!--Street-->
+		<md-input-container>
+			<label>Street</label>
+			<input ng-model="$ctrl.address.street"
+				   name="street"
+			>
+		</md-input-container>
+		<!--Postal code-->
+		<md-input-container>
+			<label>Postal code</label>
+			<input ng-model="$ctrl.address.postalCode"
+				   name="postalCode"
+			>
+		</md-input-container>
+		<!--City-->
+		<md-input-container>
+			<label>city</label>
+			<input ng-model="$ctrl.address.city"
+				   name="city"
+			>
+		</md-input-container>
+		<!--Radio button-->
+		<md-radio-group>
+
+			<md-radio-button value="male" class="md-primary">Male</md-radio-button>
+			<md-radio-button value="female" class="md-primary"> Female </md-radio-button>
+
+		</md-radio-group>
+		<!--Check box-->
+		<div>
+			<md-checkbox
+				class="md-primary"
+			>
+				Tennis
+			</md-checkbox>
+			<md-checkbox
+				class="md-primary"
+			>
+				Squash
+			</md-checkbox>
+		</div>
+		<!--Search button-->
+		<md-button
+			class="md-raised md-primary"
+			ng-click="$ctrl.onSearch($ctrl.address)"
+		>
+			Search
+		</md-button>
+	</form>
+</div>

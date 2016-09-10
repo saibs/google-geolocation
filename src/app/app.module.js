@@ -6,6 +6,9 @@ import Header from './features/headerBar/headerBar.module';
 import appComponent from './app.component';
 import config from './app.config';
 
+// Features
+import AddressSearch from './features/addressSearch/addressSearch.module';
+
 /**
  * @ngdoc overview
  * @name _app
@@ -19,7 +22,8 @@ const appModule = angular.module('app', [
 	AppCore.name,
 
 	// Features
-	Header.name
+	Header.name,
+	AddressSearch.name
 ])
 	.component('app', appComponent)
 	.config(config);
